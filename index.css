@@ -1,0 +1,84 @@
+html, body {
+	margin: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: #FFFFFF;
+}
+header {
+	/* text color */
+	color: white;
+	/* instill transparent overlay */
+	background: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 20%;
+	position: fixed;
+	float: top;
+	font-family: 'Open Sans', sans-serif; 
+	font-weight: bold;
+	z-index: 1;
+	/* No effect below */
+	align-items: center;
+}
+header > h1 {
+	padding-top: inherit;
+	padding-left: 1em;
+	/* height: 50%; */
+}
+section, section > div {
+	/* flex display (relativity) */
+	display: flex;
+	/* Force flex display as column as seen: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+	flex-direction: column;
+	/* Justify section content at the center horizontally */
+	justify-content: center;
+	/* Justify section content at the center vertically*/
+	align-items: center;
+	/* This seems to have no effect */
+	text-align: center;
+	/* Text Color */
+	color: black;
+}
+section.splash {
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	background-color: #1BB1E7;
+}
+section.splash > div > p {
+	color: white;
+	font-weight: bold;
+}
+section.splash > h1 {
+	margin-bottom: 2em;
+}
+.down-arrow {
+	position: relative;
+	background: #1061A0;
+	padding: 10px 0;
+	width: 200px;
+	text-align: center;
+	z-index: 0;
+}
+.down-arrow:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 100%;
+	width: 0;
+	height: 0;
+	border-top: 35px solid #1061A0;
+	border-right: 100px solid transparent;
+	border-bottom: 0 solid transparent;
+	border-left: 100px solid transparent;
+	z-index: 0;
+}
+.full-screen {
+	/* <section>'s with class="full-screen" will take up the entire window height */
+	height: 100%;
+}
+.half-screen {
+	height: 50%;
+}
+.divider {
+	color: white;
+	background-color: #000000;
+}
